@@ -1,0 +1,59 @@
+<legend>Register User</legend>
+
+<!--
+
+<div class="container " ng-app="myApp" ng-controller= "question">
+  <h1 style="text-align: center">Sign Up page</h1>
+      <div class="form-group" style="width: 30%; margin: 25px auto">
+  <form action="/register" method="POST">
+    <div class="form-group">
+      <input type="name" class="form-control" ng-model="name" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" ng-model="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" ng-model="password" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <button type="submit"class="btn btn-primary btn-lg btn-block"> Submit </button>
+    </div>
+    <div class="form-group">
+      <a href="/login"> Go back to login </a>
+    </div>
+  </form>
+  {{name}}
+</div>
+
+<!-- {{#if errorMessage}}
+<div class="alert alert-danger" role="alert" style=" width: 30%; margin: 25px auto">
+    {{errorMessage}}
+{{/if}} -->
+<!-- </div> -->
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <!-- First Name -->
+    <label for="name" class="control-label">First Name</label>
+    <input type="text" formControlName="name" class="form-control" id="name" name="name" placeholder="Martin">
+    <p *ngIf="invalidFirstName()" id="name_error" class="help-block">{{this.serviceErrors.name || 'Invalid first name.'}}</p>
+  </div>
+  <div class="form-group" [ngClass]="{ 'has-error': invalidEmail() }">
+    <!-- Email -->
+    <label for="email" class="control-label">E-mail</label>
+    <input type="text" formControlName="email" class="form-control" id="email" name="email" placeholder="your@email.com">
+    <p *ngIf="invalidEmail()" id="email_error" class="help-block">{{this.serviceErrors.email || 'Invalid email address.'}}</p>
+  </div>
+
+  <div class="form-group" [ngClass]="{ 'has-error': invalidPassword() }">
+    <!-- Password -->
+    <label for="password" class="control-label">Password</label>
+    <input type="password" formControlName="password" class="form-control" id="password" name="password" placeholder="*****">
+    <p *ngIf="invalidPassword()" id="password_error" class="help-block">{{this.serviceErrors.password || 'Invalid password.'}}</p>
+  </div>
+  <div class="form-group">
+    <!-- Register Button -->
+    <button type="submit" class="btn btn-primary">Register</button>
+  </div>
+</form>

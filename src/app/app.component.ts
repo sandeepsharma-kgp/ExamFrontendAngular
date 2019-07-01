@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,11 @@ import { Component } from '@angular/core';
 })
 
 // class HeaderComponent {
-//   // constructor(private router: Routes) {} (2)
+//   constructor(private route:ActivatedRoute, private router: AppRoutingModule["routes"]) {}
 //   //
-//   // login() {
-//   //   this.router.navigate(['login']); (3)
-//   // }
+//   goRegister() {
+//     this.router.navigate(['register']);
+//   }
 //
 //   // goSearch() {
 //   //   this.router.navigate(['search']); (3)
