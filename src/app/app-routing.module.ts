@@ -3,6 +3,7 @@ import { ActivatedRoute,Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component'
 import { RegisterComponent } from './register/register.component'
 import { SubjectViewComponent } from './subject-view/subject-view.component'
+import { TopicViewComponent } from './topic-view/topic-view.component'
 
 const routes: Routes = [{
   path: 'login',
@@ -13,6 +14,9 @@ const routes: Routes = [{
 },{
   path: 'subject/view',
   component: SubjectViewComponent,
+},{
+  path: 'topic/view',
+  component: TopicViewComponent,
 },
 ];
 

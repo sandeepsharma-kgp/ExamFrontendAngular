@@ -1,5 +1,5 @@
 <ng-container *ngIf="topic[0]">
-  <h2 style="text-align : center; margin-bottom:25px"> topic List </h2>
+  <h2 style="text-align : center; margin-bottom:25px"> Topic List </h2>
 
   <!-- <ng2-smart-table>
       <!-- [settings]="settings" -->
@@ -10,16 +10,12 @@
       <tr>
         <th>Topic ID</th>
         <th>Topic Name</th>
-        <th>Class</th>
-        <th>Board</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let top of topic">
-        <td>{{top.SID}}</td>
+        <td>{{top.topicId}}</td>
         <td>{{top.topicName}}</td>
-        <td>{{top.class}}</td>
-        <td>{{top.board}}</td>
       </tr>
 
     </tbody>
