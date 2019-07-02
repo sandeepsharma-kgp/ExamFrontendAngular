@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+
+// import { Ng2SmartTableModule } from 'ngx-smart-table';
 
 @Component({
   selector: 'app-subject-view',
@@ -7,23 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubjectViewComponent implements OnInit {
 
-  constructor() { }
+  subject: any = [];
+  
+  constructor(private http: HttpClient) {
 
-  ngOnInit() {
   }
 
-  settings = {
-    columns: {
-      id: {
-        title: 'ID'
-      },
-      name: {
-        title: 'Name'
-      },
-      age: {
-        title: 'Age'
-      }
-    }
-  };
+  ngOnInit() {
+
+
+    this.http.get('http://localhost:3000/api/v1/subject/all').subscribe((data: any) => {
+
+      this.subject = data;
+      console.log(data);
+    })
+  }
+
+
 
 }

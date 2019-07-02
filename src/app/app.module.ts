@@ -7,20 +7,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { SubjectViewComponent } from './subject-view/subject-view.component'
+import { SubjectViewComponent } from './subject-view/subject-view.component';
+import { TopicViewComponent } from './topic-view/topic-view.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    SubjectViewComponent
+    SubjectViewComponent,
+    TopicViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    // Ng2SmartTableModule,
     ReactiveFormsModule
   ],
   providers: [],
