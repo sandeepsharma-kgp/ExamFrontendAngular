@@ -8,7 +8,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SubjectViewComponent } from './subject-view/subject-view.component';
-import { TopicViewComponent } from './topic-view/topic-view.component'
+import { TopicViewComponent } from './topic-view/topic-view.component';
+import { SubjectEditComponent } from './subject-edit/subject-edit.component';
+import { SubjectAddComponent } from './subject-add/subject-add.component';
+import { TopicAddComponent } from './topic-add/topic-add.component';
+import { TopicEditComponent } from './topic-edit/topic-edit.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { TopicViewComponent } from './topic-view/topic-view.component'
     LoginComponent,
     RegisterComponent,
     SubjectViewComponent,
-    TopicViewComponent
+    TopicViewComponent,
+    SubjectEditComponent,
+    SubjectAddComponent,
+    TopicAddComponent,
+    TopicEditComponent
   ],
   imports: [
     BrowserModule,

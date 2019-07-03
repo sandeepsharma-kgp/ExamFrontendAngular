@@ -11,7 +11,7 @@ import { HttpClient } from "@angular/common/http";
 export class SubjectViewComponent implements OnInit {
 
   subject: any = [];
-  
+
   constructor(private http: HttpClient) {
 
   }
@@ -23,7 +23,14 @@ export class SubjectViewComponent implements OnInit {
 
       this.subject = data;
       console.log(data);
-    })
+    });
+  }
+
+  delete(id) {
+    this.http.get('http://localhost:3000/api/v1/subject/delete/' + id).subscribe((data: any) => {
+
+      console.log(data);
+    });
   }
 
 

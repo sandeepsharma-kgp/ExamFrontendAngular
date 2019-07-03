@@ -26,6 +26,11 @@ export class TopicViewComponent implements OnInit {
     })
   }
 
+  delete(id) {
+    this.http.get('http://localhost:3000/api/v1/topic/delete/' + id).subscribe((data: any) => {
 
+      console.log(data);
+    });
+  }
 
-}
+  }

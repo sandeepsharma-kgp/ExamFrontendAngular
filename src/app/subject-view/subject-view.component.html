@@ -12,17 +12,23 @@
         <th>Subject Name</th>
         <th>Class</th>
         <th>Board</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let sub of subject">
         <td>{{sub.SID}}</td>
+        <!-- <input type="text" [(ngModel)]="{{sub.SID}}" disabled="!sub.isEditable"> -->
+        <!-- <button (click)="sub.isEditable=!sub.isEditable" *ngIf="!sub.isEditable">New edit</button> -->
         <td>{{sub.subjectName}}</td>
         <td>{{sub.class}}</td>
         <td>{{sub.board}}</td>
+        <td> <a href="/subject/edit/{{sub.SID}}" class="btn btn-primary" style='margin-right:25px'>Edit</a>
+          <button type="submit" class="btn btn-primary" (click)="delete(sub.SID)">Delete</button></td>
       </tr>
 
     </tbody>
   </table>
+  <a href = "/subject/add"> Add subject </a>
 </ng-container>
 <!-- <ng2-smart-table [settings]="settings"></ng2-smart-table> -->

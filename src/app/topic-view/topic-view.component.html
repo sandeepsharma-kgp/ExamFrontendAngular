@@ -16,9 +16,12 @@
       <tr *ngFor="let top of topic">
         <td>{{top.topicId}}</td>
         <td>{{top.topicName}}</td>
+        <td> <a href="/topic/edit/{{top.topicId}}" class="btn btn-primary" style='margin-right:25px'>Edit</a>
+          <button type="submit" class="btn btn-primary" (click)="delete(top.topicId)">Delete</button></td>
       </tr>
 
     </tbody>
   </table>
+  <a href = "/topic/add"> Add topic </a>
 </ng-container>
 <!-- <ng2-smart-table [settings]="settings"></ng2-smart-table> -->
