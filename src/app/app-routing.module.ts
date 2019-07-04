@@ -8,6 +8,10 @@ import { SubjectEditComponent } from './subject-edit/subject-edit.component'
 import { TopicAddComponent } from './topic-add/topic-add.component'
 import { TopicViewComponent } from './topic-view/topic-view.component'
 import { TopicEditComponent } from './topic-edit/topic-edit.component'
+import { MapTopicViewComponent } from './map-topic-view/map-topic-view.component'
+import { MapTopicAddComponent } from './map-topic-add/map-topic-add.component'
+import { QuestionViewComponent } from './question-view/question-view.component'
+import { QuestionEditComponent } from './question-edit/question-edit.component'
 
 const routes: Routes = [{
   path: 'login',
@@ -33,6 +37,18 @@ const routes: Routes = [{
 },{
   path: 'topic/edit/:id',
   component: TopicEditComponent,
+},{
+  path: 'topiclist/view',
+  component: MapTopicViewComponent,
+},{
+  path: 'topiclist/add',
+  component: MapTopicAddComponent,
+},{
+  path: 'question/view',
+  component: QuestionViewComponent,
+},{
+  path: 'question/edit/:id',
+  component: QuestionEditComponent,
 },
 ];
 

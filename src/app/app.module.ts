@@ -12,7 +12,12 @@ import { TopicViewComponent } from './topic-view/topic-view.component';
 import { SubjectEditComponent } from './subject-edit/subject-edit.component';
 import { SubjectAddComponent } from './subject-add/subject-add.component';
 import { TopicAddComponent } from './topic-add/topic-add.component';
-import { TopicEditComponent } from './topic-edit/topic-edit.component'
+import { TopicEditComponent } from './topic-edit/topic-edit.component';
+import { MapTopicViewComponent } from './map-topic-view/map-topic-view.component';
+import { MapTopicAddComponent } from './map-topic-add/map-topic-add.component';
+import { QuestionViewComponent } from './question-view/question-view.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { QuestionEditComponent } from './question-edit/question-edit.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { TopicEditComponent } from './topic-edit/topic-edit.component'
     SubjectEditComponent,
     SubjectAddComponent,
     TopicAddComponent,
-    TopicEditComponent
+    TopicEditComponent,
+    MapTopicViewComponent,
+    MapTopicAddComponent,
+    QuestionViewComponent,
+    NotFoundComponent,
+    QuestionEditComponent
   ],
   imports: [
     BrowserModule,
