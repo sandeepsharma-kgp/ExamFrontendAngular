@@ -1,0 +1,42 @@
+<div class="container">
+  <h1 style="text-align: center"> Map a topic </h1>
+  <div class="form-group" style="width: 30%; margin: 25px auto">
+    <form class="form-group">
+      <!-- <div class="form-group">
+        <input type="text" class="form-control" id="topicName" name="topicName" required [(ngModel)]="topicName" placeholder="Topic Name">
+      </div> -->
+      <label>Topic</label>
+      <select name="topic" id="topic" style="margin-bottom: 15px" [(ngModel)]="topicSelected">
+        <option *ngFor = "let top of topic" [value]="top.topicId">{{top.topicName}}</option>
+      </select>
+      <label>Subject</label>
+      <select name="subject" id="subject" style="margin-bottom: 15px" [(ngModel)]="subjectSelected">
+        <option *ngFor = "let sub of subject" [value]="sub.subjectName">{{sub.subjectName}}</option>
+      </select>
+      <label>Class</label>
+      <select name="class" id="class" style="margin-bottom: 15px" [(ngModel)]="class" placeholder="Class">
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+
+      <label>Board</label>
+      <select name="board" id="board" [(ngModel)]="board">
+        <option value="CBSE">CBSE</option>
+        <option value="ICSE">ICSE</option>
+        <option value="JEEM">JEEMains</option>
+        <option value="JEEA">JEEAdvanced</option>
+        <option value="NEET">NEET</option>
+      </select>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="add()"> Submit </button>
+      </div>
+
+      <a href="/topic/view"> Go back </a>
+    </form>
+  </div>
+</div>
+
+<br />

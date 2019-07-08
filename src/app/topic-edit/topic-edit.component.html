@@ -1,0 +1,18 @@
+
+
+<ng-container *ngIf="topic">
+  <h2> Edit Topic </h2>
+  <div class="form-group row">
+    <label class="col-xs-6 col-form-label"> Topic ID : </label>
+    <input type="text" class="form-control" id="name" required [(ngModel)]="topic.topicId" />
+  </div>
+  <div class="form-group row">
+    <label class="col-xs-6 col-form-label"> Topic : </label>
+    <input type="text" class="form-control" id="name" required [(ngModel)]="topic.topicName" />
+  </div>
+  <div class="form-group">
+    <!-- Update Button -->
+    <button type="submit" class="btn btn-primary" (click)="update()">Update</button>
+  </div>
+  <a href='/topic/view'> Go back </a>
+</ng-container>

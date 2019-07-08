@@ -1,0 +1,31 @@
+<ng-container *ngIf="question">
+  <h2 style="text-align : center; margin-bottom:25px"> Question Preview </h2>
+  <div class="form-group">
+    <div class="form-group row">
+      <div class="col-xs-6">Question : {{question.questionName}}</div>
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-6">Option 1 : {{question.option1}}</div>
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-6">Option 2 : {{question.option2}}</div>
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-6">Option 3 : {{question.option3}}</div>
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-6"> Option 4 : {{question.option4}}</div>
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-6">Solution : {{question.solution}}</div>
+    </div>
+    <div class="form-group row">  
+      <div class="col-xs-6">AnswerKey : {{question.answerKey}}</div>
+    </div>
+
+
+  </div>
+
+  <a href="/question/view"> Go back </a>
+</ng-container>
+<!-- <ng2-smart-table [settings]="settings"></ng2-smart-table> -->
