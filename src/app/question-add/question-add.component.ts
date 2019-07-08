@@ -23,11 +23,11 @@ export class QuestionAddComponent implements OnInit {
   answerKey1: any; answerKey2: any; answerKey3: any; answerKey4: any; uploadImage: any = [];
   myGroup: any;
   file: any = [];
-  uploadForm: FormGroup;
-  filesToUpload: Array<File>;
+  // uploadForm: FormGroup;
+  // filesToUpload: Array<File>;
 
   constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private http: HttpClient) {
-    this.filesToUpload = [];
+    // this.filesToUpload = [];
    }
 
   ngOnInit() {
@@ -42,9 +42,9 @@ export class QuestionAddComponent implements OnInit {
       this.subject = data;
       console.log(data);
     });
-    this.uploadForm = this.formBuilder.group({
-      profile: ['']
-    });
+    // this.uploadForm = this.formBuilder.group({
+    //   profile: ['']
+    // });
   }
 
   getTopic() {
@@ -68,8 +68,8 @@ export class QuestionAddComponent implements OnInit {
     // this.file[0] = event.target.files[0];
     // console.log(this.file);
     // if (event.target.files.length > 0) {
-      this.filesToUpload = <Array<File>> fileInput.target.files;
-      console.log(this.filesToUpload)
+      // this.filesToUpload = <Array<File>> fileInput.target.files;
+      // console.log(this.filesToUpload)
       // }
   }
   onFileChanged2(event) {
@@ -121,12 +121,12 @@ export class QuestionAddComponent implements OnInit {
     // this.myGroup = new FormGroup({
     //   profile: new FormControl()
     //
-    console.log(this.uploadForm.get('profile').value)
-console.log(this.uploadForm.get('profile'))
-    this.http.post<any>('http://localhost:3000/question/add',[], this.filesToUpload).subscribe(
-      (res) => console.log(res),
-      (err) => console.log(err)
-    );
+//     console.log(this.uploadForm.get('profile').value)
+// console.log(this.uploadForm.get('profile'))
+//     this.http.post<any>('http://localhost:3000/question/add',[], this.filesToUpload).subscribe(
+//       (res) => console.log(res),
+//       (err) => console.log(err)
+//     );
     // this.http.post('http://localhost:3000/question/add', this.question).subscribe((data: any) => {
     //
     //   console.log(data);
