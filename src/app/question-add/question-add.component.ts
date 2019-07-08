@@ -115,8 +115,8 @@ export class QuestionAddComponent implements OnInit {
     // this.question.option1Image = this.option1Image;
     // console.log(this.question);
     // console.log(this.question);
-    var formData = new FormData();
-    formData.append('file', this.uploadForm.get('profile'));
+    // var formData = new FormData();
+    // formData.append('file', this.uploadForm.get('profile'));
 
     // this.myGroup = new FormGroup({
     //   profile: new FormControl()
