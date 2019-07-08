@@ -15,6 +15,7 @@ export class MapTopicAddComponent implements OnInit {
   subjectSelected : any;
   topicSelected : any;
   serviceErrors : any;
+  topic : any;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
 

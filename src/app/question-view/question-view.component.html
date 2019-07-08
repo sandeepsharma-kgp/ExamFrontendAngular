@@ -1,6 +1,4 @@
-<p>
-  question-view works!
-</p>
+
 <ng-container *ngIf="question[0]">
   <h2 style="text-align : center; margin-bottom:25px"> Question List </h2>
 
@@ -18,11 +16,12 @@
         <td>{{ques.status}}</td>
         <td></td>
         <td> <a href="/question/edit/{{ques._id}}" class="btn btn-primary" style='margin-right:25px'>Edit</a>
+          <a href="/question/preview/{{ques._id}}" class="btn btn-primary" style='margin-right:25px'>Preview</a>
           <button type="submit" class="btn btn-primary" (click)="delete(ques._id)">Delete</button></td>
       </tr>
 
     </tbody>
   </table>
-  <a href = "/subject/add"> Add subject </a>
+  <a href = "/question/add"> Add question </a>
 </ng-container>
 <!-- <ng2-smart-table [settings]="settings"></ng2-smart-table> -->

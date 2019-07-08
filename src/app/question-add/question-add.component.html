@@ -1,0 +1,94 @@
+<div class="container">
+  <h1 style="text-align: center"> Choose the categories </h1>
+  <div class="form-group" style="width: 30%; margin: 25px auto">
+    <form class="form-group" enctype="multipart/form-data">
+      <label>Subject</label>
+      <select name="subject" id="subject" style="margin-bottom: 15px" [(ngModel)]="subjectSelected"  [ngModelOptions]="{standalone: true}">
+        <option *ngFor="let sub of subject" [value]="sub.subjectName">{{sub.subjectName}}</option>
+      </select>
+      <label>Class</label>
+      <select name="class" id="class" style="margin-bottom: 15px" [(ngModel)]="class" placeholder="Class"  [ngModelOptions]="{standalone: true}">
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+
+      <label>Board</label>
+      <select name="board" id="board" [(ngModel)]="board" [ngModelOptions]="{standalone: true}">
+        <option value="CBSE">CBSE</option>
+        <option value="ICSE">ICSE</option>
+        <option value="JEEM">JEEMains</option>
+        <option value="JEEA">JEEAdvanced</option>
+        <option value="NEET">NEET</option>
+      </select>
+      <button type="submit" name="button" (click)="getTopic()">Search topics</button>
+      <div class="form-group" *ngIf="topicList">
+        <label>Topic</label>
+        <select name="topic" id="topic" style="margin-bottom: 15px" [(ngModel)]="topicSelected" [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let top of topicList" [value]="top.topicId">{{top.topicName}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h1 style="text-align: center"> Add a question </h1>
+        <div class="form-group" style="width: 30%; margin: 25px auto" ng-show='showques'>
+          <form class="form-group" id="myForm" enctype="multipart/form-data" [formGroup]="uploadForm" method="POST" action="/question/add">
+            <div class="form-group">
+              <input type="text" class="form-control" name="questionName" placeholder="Question" [(ngModel)]="questionName" [ngModelOptions]="{standalone: true}">
+              <!-- <input type="file" class="form-control" name="quesImage" placeholder="Upload"> -->
+              <input type="file" name="questionImage" (change)="onFileChanged1($event)">
+              <div>
+                <input type="file" name="profile" (change)="onFileChanged1($event)" />
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="option1" placeholder="option1" [(ngModel)]="option1" [ngModelOptions]="{standalone: true}">
+              <input type="file" name="option1Image" (change)="onFileChanged2($event)">
+            </div> -->
+            <div class="form-group">
+              <input type="text" class="form-control" name="option2" placeholder="option2" [(ngModel)]="option2" [ngModelOptions]="{standalone: true}">
+              <input type="file" name="option2Image" (change)="onFileChanged3($event)">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="option3" placeholder="option3" [(ngModel)]="option3" [ngModelOptions]="{standalone: true}">
+              <input type="file" name="option3Image" (change)="onFileChanged4($event)">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="option4" placeholder="option4" [(ngModel)]="option4" [ngModelOptions]="{standalone: true}">
+              <input type="file" name="option4Image" (change)="onFileChanged5($event)">
+            </div>
+            <div>
+              <select name="level" id="level" [(ngModel)]="level" [ngModelOptions]="{standalone: true}">
+                <option value="Beginner">Beginner</option>
+                <option value="Amateur">Amateur</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Expert">Expert</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="solution" placeholder="solution">
+              <input type="file" name="solutionImage" (change)="onFileChanged6($event)">
+            </div>
+            <div class="dropdown">
+              <h3> AnswerKey: </h3>
+              <input type="checkbox" name="answerKey1" (change)="update('A')" [(ngModel)]="answerKey1" [ngModelOptions]="{standalone: true}"/> A
+              <input type="checkbox" name="answerKey2" (change)="update('B')" [(ngModel)]="answerKey2" [ngModelOptions]="{standalone: true}"/> B
+              <input type="checkbox" name="answerKey3" (change)="update('C')" [(ngModel)]="answerKey3" [ngModelOptions]="{standalone: true}"/> C
+              <input type="checkbox" name="answerKey4" (change)="update('D')" [(ngModel)]="answerKey4" [ngModelOptions]="{standalone: true}"/> D
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="add()"> Submit </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+
+      <a href="/topic/view"> Go back </a>
+    </form>
+  </div>
+</div>
+
+<br />

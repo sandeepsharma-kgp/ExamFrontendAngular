@@ -10,8 +10,10 @@ import { TopicViewComponent } from './topic-view/topic-view.component'
 import { TopicEditComponent } from './topic-edit/topic-edit.component'
 import { MapTopicViewComponent } from './map-topic-view/map-topic-view.component'
 import { MapTopicAddComponent } from './map-topic-add/map-topic-add.component'
+import { QuestionAddComponent } from './question-add/question-add.component'
 import { QuestionViewComponent } from './question-view/question-view.component'
 import { QuestionEditComponent } from './question-edit/question-edit.component'
+import { QuestionPreviewComponent } from './question-preview/question-preview.component'
 
 const routes: Routes = [{
   path: 'login',
@@ -49,6 +51,12 @@ const routes: Routes = [{
 },{
   path: 'question/edit/:id',
   component: QuestionEditComponent,
+},{
+  path: 'question/preview/:id',
+  component: QuestionPreviewComponent,
+},{
+  path: 'question/add',
+  component: QuestionAddComponent,
 },
 ];
 

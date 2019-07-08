@@ -17,7 +17,9 @@ import { MapTopicViewComponent } from './map-topic-view/map-topic-view.component
 import { MapTopicAddComponent } from './map-topic-add/map-topic-add.component';
 import { QuestionViewComponent } from './question-view/question-view.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { QuestionEditComponent } from './question-edit/question-edit.component'
+import { QuestionEditComponent } from './question-edit/question-edit.component';
+import { QuestionAddComponent } from './question-add/question-add.component';
+import { QuestionPreviewComponent } from './question-preview/question-preview.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { QuestionEditComponent } from './question-edit/question-edit.component'
     MapTopicAddComponent,
     QuestionViewComponent,
     NotFoundComponent,
-    QuestionEditComponent
+    QuestionEditComponent,
+    QuestionAddComponent,
+    QuestionPreviewComponent
   ],
   imports: [
     BrowserModule,

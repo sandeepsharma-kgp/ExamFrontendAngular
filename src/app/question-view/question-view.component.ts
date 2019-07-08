@@ -19,11 +19,14 @@ export class QuestionViewComponent implements OnInit {
       console.log(this.question);
     });
   }
+
   delete(id) {
     this.http.get('http://localhost:3000/api/v1/question/delete/' + id).subscribe((data: any) => {
 
       console.log(data);
     });
   }
+
+
 
 }
